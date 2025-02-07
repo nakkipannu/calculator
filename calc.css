@@ -165,4 +165,5 @@ input[type=number] {
     height: 100%;
     z-index: 98;
     pointer-events: none;
+    background-color: black;
 }
