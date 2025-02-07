@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+<div class="mainContainer">
+  <div class="formContainer">
+    <form id="myForm">
+        <label for="cups">How many cups of coffee do you sell per day?</label><br>
+        <input type="number" id="cups" name="cups" value="20" max="10000"><br>
+        <label for="days">How many days a week are you open?</label><br>
+        <input type="number" id="days" name="days" value="5" max="7"><br><br>
+        <input type="submit" class="submitButton" value="CALCULATE">
+    </form>
+  </div>
+  <div class="resultsContainer">
+    <div id="myResults" class="myResults">
+        <h3>You will generate coffee waste:</h3>
+        <p>Daily: <span id="resultDisplay1"></span></p>
+        <p>Weekly: <span id="resultDisplay2"></span></p>
+        <p>Monthly: <span id="resultDisplay3"></span></p>
+        <p>Yearly: <span id="resultDisplay4"></span></p>
+        <h3>If you let Paahtu collect your coffee waste, you will save:</h3>
+        <p>Monthly: <span id="resultDisplay5"></span></p>
+        <p>Yearly: <span id="resultDisplay6"></span></p>
+    </div>
+  </div>
+</div>
+<!-- Custom Alert Dialog -->
+<div id="customAlert" class="custom-alert" style="display: none;">
+    <div class="custom-alert-content">
+        <span id="customAlertMessage"></span>
+        <button onclick="closeCustomAlert()">OK</button>
+    </div>
+</div>
+
+<!-- Canvas for spark effect -->
+<canvas id="canvas"></canvas>
+
+<script src="calc.js"></script>
+</body>
+</html>
